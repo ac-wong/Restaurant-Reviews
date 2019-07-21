@@ -159,7 +159,6 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant, i) => {
   const li = document.createElement('li');
-  li.setAttribute("id", `rest${i}`);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -180,19 +179,18 @@ createRestaurantHTML = (restaurant, i) => {
   address.innerHTML = restaurant.address;
   li.append(address);
 
-
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("role","Button");
+  more.setAttribute("aria-label", "Button");
+  more.setAttribute("tabindex", "0");
+  more.setAttribute("id", `rest${i}`);
   li.append(more);
 
-  const moreRole = document.createElement('span');
-  moreRole.role = "button";
-  moreRole.tabindex = "0";
-  li.append(moreRole);
-
   const moreLabel = document.createElement('label');
-  moreLabel.setAttribute("for", li.id);
+  moreLabel.setAttribute("for", more.id);
+  moreLabel.setAttribute("class", "hideLabel");
   moreLabel.innerHTML = `view details for ${restaurant.name}`
   li.append(moreLabel);
 

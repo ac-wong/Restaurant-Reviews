@@ -407,6 +407,34 @@ nav h1 a {
   text-align: left;
 }
 
+
+/* show a border around dropbox when focused*/
 select:focus {
-  border: 2px solid #252831; /* i added */
+  border: 2px solid #252831;
+}
+
+/* hide label when not using screenreader*/
+.hideLabel {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
