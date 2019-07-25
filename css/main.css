@@ -1,1 +1,38 @@
-/* add styles tp make static webpage responsive here */
+/*
+ * styles for the index.html page to improve responsivity
+ */
+@media screen and (min-width: 475px) {
+    #restaurants-list li {
+        padding: 0 30px 25px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .filter-options {
+        justify-content: flex-start;
+    }
+
+    .filter-options h2 {
+      margin: 10px 20px 0;
+      width: 100%;
+    }
+
+    .filter-options select {
+      margin: 10px 20px;
+    }
+}
+
+@media screen and (min-width: 635px) {
+    .filter-options h2 {
+      margin: 10px 20px;
+      width: 100px;
+    }
+
+    .filter-options select {
+      margin: 10px 20px;
+    }
+
+    .filter-options {
+      justify-content: center;
+    }
+}

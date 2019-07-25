@@ -1,0 +1,49 @@
+/*
+ * styles for the restaurant.html page to improve responsivity
+ */
+@media screen and (min-width: 550px) {
+  .reviewer {
+    text-align: left;
+    width: 50px;
+  }
+  .review-date {
+    text-align: left;
+    width: calc(100% - 130px);
+  }
+  #restaurant-container {
+    width: 50%;
+    order: 1;
+    text-align: left;
+    max-width: 485px;
+    }
+  #reviews-container {
+    order: 3;
+    width: 100%;
+    text-align: left;
+  }
+  .inside #map-container {
+      width: 40%;
+      height: 500px;
+      order: 2;
+      padding: 102px 0 0;
+      margin-left: -25px;
+      max-width: 337px;
+  }
+  .inside #map {
+    height: 355px;
+  }
+  #restaurant-container .restaurant-img {
+    max-width: 378px;
+    max-height: 320px;
+  }
+  #restaurant-cuisine {
+    border-radius: 0;
+    max-width: 378px;
+  }
+  .inside #maincontent {
+    background-color: #f3f3f3;
+  }
+  #reviews-list li {
+    width: 85%;
+  }
+}
